@@ -11,6 +11,7 @@
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="SpecFlow" Version="3.1.76" />
+    <PackageReference Include="SpecFlow.Tools.MSBuild.Generation" Version="3.1.76" />
     <PackageReference Include="SpecFlow.NUnit" Version="3.1.76" />
   </ItemGroup>
 
@@ -20,16 +21,5 @@
   <ItemGroup>
     <Folder Include="Scenarios\" />
     <Folder Include="StepDefinitions\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="Scenarios\FirstFeature.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FirstFeature.feature.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Scenarios\FirstFeature.feature.cs">
-      <DependentUpon>FirstFeature.feature</DependentUpon>
-    </Compile>
   </ItemGroup>
 </Project>
